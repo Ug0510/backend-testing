@@ -1,6 +1,6 @@
 // Import the Express.js module
 const express = require('express');
-const api = require('./api');
+const api = require('./api/index');
 // Create an instance of Express
 const app = express();
 
@@ -8,6 +8,8 @@ const app = express();
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
+
+app.use('/', require('./routes'));
 
 // Start the server and listen on port 3000
 app.listen(3000, () => {
