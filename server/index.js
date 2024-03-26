@@ -1,15 +1,15 @@
 // Import the Express.js module
 const express = require('express');
-const api = require('./api/index');
+// const api = require('./api/index');
 // Create an instance of Express
 const app = express();
 
 // Define a route that responds with "Hello, World!" when accessed
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+  res.send('Hello, World people!');
 });
 
-app.use('/', require('./routes'));
+// app.use('/', require('../routes'));
 
 // Start the server and listen on port 3000
 app.listen(3000, () => {
